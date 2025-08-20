@@ -22,7 +22,7 @@ def criar_usuario():
     id = max(usuario['id'] for usuario in usuarios) + 1
     novo_usuario['id'] = id
     usuarios.append(novo_usuario)
-    return jsonify({'mensagem': 'Usuario cadastrado com sucesso'}), 201
+    return jsonify({'mensagem': novo_usuario}), 201
 
 
 @app.route('/users/<int:id>', methods=['PUT'])
