@@ -22,5 +22,16 @@ def criar_usuario():
     usuarios.append(novo_usuario)
     return jsonify({'mensagem': 'Usuario cadastrado com sucesso'}), 201
 
+@app.route('/users/<int:id>', methods=['PUT'])
+def atualizar_usuario(id):
+    atualizar_usuario = request.json
+    for pos, usuario in enumerate(usuarios):
+        if usuario['id'] == id:
+            atualizar_usuario['id'] = id
+            usuarios[pos] = atualizar_usuario
+            return jsonify({'mensagem': f'Dados de {usuario['nome']} atualizados com sucesso'}), 200
+    return jsonify({'mensagem': 'Usuario nao encontrado'}), 404
+        
+
 if __name__ == '__main__':
     app.run(host='localhost', port= 5000, debug= True)
