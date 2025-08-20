@@ -1,4 +1,4 @@
-usuario = [
+usuarios = [
     {"id": 1, "nome": "Ana Silva", "email": "ana.silva@email.com", "senha": "senha123"},
     {"id": 2, "nome": "Carlos Souza", "email": "carlos.souza@email.com", "senha": "senha456"},
     {"id": 3, "nome": "Maria Oliveira", "email": "maria.oliveira@email.com", "senha": "senha789"},
