@@ -32,7 +32,7 @@ def atualizar_usuario(id):
         if usuario['id'] == id:
             atualizar_usuario['id'] = id
             usuarios[pos] = atualizar_usuario
-            return jsonify({'mensagem': f'Dados de {usuario['nome']} atualizados com sucesso'}), 200
+            return jsonify({'mensagem': atualizar_usuario}), 200
     return jsonify({'mensagem': 'Usuario nao encontrado'}), 404
 
 
